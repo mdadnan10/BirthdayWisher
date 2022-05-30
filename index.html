@@ -66,13 +66,13 @@
 </head>
 
 <body>
-  <div class="main_div">
+  <div class="main_div" onclick="wish()">
     <div class="centerDiv">
 
-      <p>Wishing you a very</p>
-      <p>🎂 Happy Birthday Karuna 🎂</p>
+      <p onclick="wish()">Wishing you a very</p>
+      <p onclick="wish()">🎂 Happy Birthday Karuna 🎂</p>
 
-      <audio src="wish.mp3" id="wishAudio" autoplay="autoplay" loop="loop"></audio>
+      <audio src="wish.mp3" autoplay id="wishAudio"></audio>
 
     </div>
   </div>
@@ -82,9 +82,10 @@
   <script>
     //   confetti.stop();
 
-    // window.onload = function() {
-    //   document.getElementById("wishAudio").play();
-    // }
+    function wish() {
+      console.log("Wishing");
+      document.getElementById("wishAudio").play();
+    }
 
     const startit = () => {
       setTimeout(function () {
@@ -97,7 +98,7 @@
       setTimeout(function () {
         console.log("stop");
         confetti.stop();
-      }, 9000);
+      }, 15000);
     };
 
     startit();
