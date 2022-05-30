@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Karuna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 60%;
+    }
+
+    .main_div {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      align-items: center;
+      background-color: hsl(0, 0, 94%);
+    }
+
+    .centerDiv {
+      min-width: 50vw;
+      height: 40vh;
+      color: #000;
+      font-family: 'Satisfy', cursive;
+      font-size: 7rem;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+    }
+
+    @media (max-width: 785px) {
+      html {
+        font-size: 25%;
+      }
+    }
+
+    @media (max-width: 350px) {
+      html {
+        font-size: 22%;
+      }
+    }
+
+    @media (max-width: 310px) {
+      html {
+        font-size: 20%;
+      }
+    }
+
+    @media (max-width: 280px) {
+      html {
+        font-size: 15%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main_div">
+    <div class="centerDiv">
+
+      <p>Wishing you a very</p>
+      <p>🎂 Happy Birthday Karuna 🎂</p>
+
+      <audio src="wish.mp3" id="wishAudio" autoplay="autoplay" loop="loop"></audio>
+
+    </div>
+  </div>
+
+  <script src="./confeti/confetti.js"></script>
+
+  <script>
+    //   confetti.stop();
+
+    // window.onload = function() {
+    //   document.getElementById("wishAudio").play();
+    // }
+
+    const startit = () => {
+      setTimeout(function () {
+        console.log("start");
+        confetti.start();
+      }, 500);
+    };
+
+    const stopit = () => {
+      setTimeout(function () {
+        console.log("stop");
+        confetti.stop();
+      }, 9000);
+    };
+
+    startit();
+    stopit();
+  </script>
+</body>
+
+</html>
