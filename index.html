@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Kajol</title>
+  <title>Happy Birthday Karuna</title>
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -27,7 +30,7 @@
 
     .centerDiv {
       min-width: 50vw;
-      height: 40vh;
+      height: 97vh;
       color: #000;
       font-family: 'Satisfy', cursive;
       font-size: 7rem;
@@ -37,6 +40,21 @@
       align-items: center;
       justify-content: center;
       text-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+    }
+
+    .footer {
+      height: 3vh;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    h6 {
+      padding: 5px;
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-family: 'Oleo Script Swash Caps', cursive;
     }
 
     @media (max-width: 785px) {
@@ -75,6 +93,9 @@
       <audio src="wish.mp3" autoplay id="wishAudio"></audio>
 
     </div>
+    <div class="footer">
+      <h6>From Adnan</h6>
+    </div>
   </div>
 
   <script src="./confeti/confetti.js"></script>
@@ -84,8 +105,10 @@
 
     function wish() {
       console.log("Wishing");
+      startit();
       document.getElementById("wishAudio").play();
-    }
+      stopit();
+    };
 
     const startit = () => {
       setTimeout(function () {
